@@ -1,13 +1,113 @@
-body {
+body, html {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+nav {
+  position: sticky;
+  top : 0;
+  left : 0;
+  width: 100%;
+  height: 25vh;
+  background-color: aquamarine;  
+  display: grid;
+  place-items: center;  
+  font-weight: bolder;
+  font-size: xx-large;
+  z-index: 300;
+}
+.navInput {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  place-items: center ;
+}
+.navInput>input {
+  margin-top : 2%;
+  width: 20%;
+  padding : 1% 5%;
+}
+.navInput>select {
+  background-color: white;
+  padding: 1rem 2rem;
+}
+
+.cards {
+  width: 100% ;
+  height: max-content;
+
+}
+.card {
+  position: relative;
+  width : 100%;
+  height: max-content;
+  padding: 5vh 0;
+}
+
+.card>.ayat {
+  margin-right: 10px;
+  text-align: end;
+  font-weight: bolder;
+  margin-bottom: 30px;
+}
+
+.cards>.card:nth-child(odd) {
+  background-color: palegoldenrod;
+}
+
+.kataArab {
+
+  color : green;
+  margin-bottom : 15px;
+  margin-left: calc(10px + 1rem);
+}
+
+.arti {
+  margin-left: calc(10px + 1rem);
+  
+}
+
+.card::before {
+  content: attr(data-nomor);
+  position : sticky;
+  top : 0%;
+  left : 0%;
+  padding : 10px;
+  border-radius: 50%;
+  border: 1px solid black;
+}
+
+.modal {
+  position: fixed;
+  top : 0;
+  left : 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 900;
+  place-items: center;
+}
+
+.box {
+  display: grid;
+  place-items: center;
+  width: 50vw;
+  height: 50vh;
+  background-color: whitesmoke;
+  border-radius: .5rem;
+  font-weight: bolder;
+  font-size: xx-large;
+}
+
+.surahHeader {
+  width : 100vw;
+  display : grid;
+  justify-content: center;
+}
+
+audio {
+  position: fixed;
+  bottom : 0;
+  left : 0;
+  z-index: 600;
 }
