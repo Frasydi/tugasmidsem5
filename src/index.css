@@ -35,7 +35,7 @@ nav {
 .cards {
   width: 100% ;
   height: max-content;
-
+  padding-bottom : 3rem;
 }
 .card {
   position: relative;
