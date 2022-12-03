@@ -97,6 +97,7 @@ function App() {
   useEffect(() => {
     getSurah()
   }, [surah, semuaSurah])
+  
   return (
     <>
     <audio src={audio} controls>
